@@ -43,7 +43,7 @@ def daily_reminder():
         return # Exit the function if time-bound input is invalid
 
     # 4. Provide a Customized Reminder
-    print(f"{reminder:}")
+    print(f"reminder: {task}")
 
 # Run the daily reminder script
 if __name__ == "__main__":

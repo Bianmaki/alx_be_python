@@ -8,8 +8,7 @@ def draw_square_pattern():
     while True:
         try:
             # Prompt user for the pattern size
-            size_str = input("Enter the size of the pattern: ")
-            size = int(size_str)
+            size_str = int(input("Enter the size of the pattern: "))
 
             # Validate if the input is a positive integer
             if size <= 0:

@@ -23,7 +23,7 @@ def daily_reminder():
             reminder_message = f"Note: '{task}' is a low priority task"
         case _:
             # Handle invalid priority input
-            print("Invalid priority level entered. Please choose 'high', 'medium', or 'low'.")
+            print(f"Invalid priority level entered. Please choose 'high', 'medium', or 'low'.")
             return # Exit the function if priority is invalid
 
     # 3. Modify the reminder based on time sensitivity using an if statement
@@ -39,11 +39,11 @@ def daily_reminder():
             reminder_message += ". You can plan to complete it today."
     else:
         # Handle invalid time-bound input
-        print("Invalid input for time-bound. Please answer 'yes' or 'no'.")
+        print(f"Invalid input for time-bound. Please answer 'yes' or 'no'.")
         return # Exit the function if time-bound input is invalid
 
     # 4. Provide a Customized Reminder
-    print(reminder_message)
+    print(f"{reminder_message}")
 
 # Run the daily reminder script
 if __name__ == "__main__":

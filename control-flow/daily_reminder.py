@@ -18,9 +18,9 @@ def daily_reminder():
         case "high":
             reminder_message = f"Reminder: '{task}' is a high priority task"
         case "medium":
-            reminder_message = f"Note: '{task}' is a medium priority task"
+            reminder_message = f"Reminder: '{task}' is a medium priority task"
         case "low":
-            reminder_message = f"Note: '{task}' is a low priority task"
+            reminder_message = f"Reminder: '{task}' is a low priority task"
         case _:
             # Handle invalid priority input
             print(f"Invalid priority level entered. Please choose 'high', 'medium', or 'low'.")

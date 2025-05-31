@@ -11,16 +11,16 @@ def daily_reminder():
     time_bound = input("Is it time-bound? (yes/no): ").lower() # Convert to lowercase for consistent checking
 
     # Initialize the base reminder message
-    reminder_message = ""
+    reminder = ""
     
     # 2. Process the Task Based on Priority using Match Case
     match priority:
         case "high":
-            reminder_message = f"Reminder: '{task}' is a high priority task"
+            reminder = f"Reminder: '{task}' is a high priority task"
         case "medium":
-            reminder_message = f"Reminder: '{task}' is a medium priority task"
+            reminder = f"Reminder: '{task}' is a medium priority task"
         case "low":
-            reminder_message = f"Reminder: '{task}' is a low priority task"
+            reminder = f"Reminder: '{task}' is a low priority task"
         case _:
             # Handle invalid priority input
             print(f"Invalid priority level entered. Please choose 'high', 'medium', or 'low'.")
@@ -29,21 +29,21 @@ def daily_reminder():
     # 3. Modify the reminder based on time sensitivity using an if statement
     if time_bound == "yes":
         # Add the immediate attention phrase for time-bound tasks
-        reminder_message += " that requires immediate attention today!"
+        reminder += " that requires immediate attention today!"
     elif time_bound == "no":
         # For non-time-bound low priority tasks, add a specific suggestion
         if priority == "low":
-            reminder_message += ". Consider completing it when you have free time."
+            reminder += ". Consider completing it when you have free time."
         else:
             # For non-time-bound high/medium tasks, just a general completion note
-            reminder_message += ". You can plan to complete it today."
+            reminder += ". You can plan to complete it today."
     else:
         # Handle invalid time-bound input
         print(f"Invalid input for time-bound. Please answer 'yes' or 'no'.")
         return # Exit the function if time-bound input is invalid
 
     # 4. Provide a Customized Reminder
-    print(f"{reminder_message}")
+    print(f"{reminder}")
 
 # Run the daily reminder script
 if __name__ == "__main__":
